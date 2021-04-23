@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SessionTwo_WebApplicationFundamentals.Models.User>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetUsers</title>
+</head>
+<body>
+    <div>
+        <h2>List of Users</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+         <tbody>
+             @foreach(var user in Model)
+            {
+             <tr>
+                 <td>@user.Id</td>
+                 <td>@user.Name</td>
+                 <td>@user.Age</td>
+             </tr>
+            }
+         </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

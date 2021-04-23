@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h2>@ViewBag.Message</h2>
+        <p>This is Index Action Method of User Controller.</p>
+        <p>Total Number of Users: @ViewBag.TotalUsers</p>
+
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in ViewBag.UserList)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Age</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+        <p>@ViewBag.DateTime</p>
+    </div>
+</body>
+</html>

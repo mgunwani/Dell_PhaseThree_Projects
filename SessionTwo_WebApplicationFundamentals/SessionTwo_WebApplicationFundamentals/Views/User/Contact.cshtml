@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact</title>
+</head>
+<body>
+    <div> 
+        <h2>Contact Page</h2>
+
+        <h3>@TempData["Message"]</h3>
+
+        @{ TempData.Keep("Message"); }
+
+        @Html.ActionLink("Contact One", "ContactOne", "User");
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@using SessionTwo_WebApplicationFundamentals.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewData["Message"]</h2>
+        <p>About View of User Controller.</p>
+        <p>Total Number of Users: @ViewData["TotalUsers"]</p>
+
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in ViewData["UserList"] as IList<User>)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Age</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <p>@ViewData["DateTime"]</p>
+    </div>
+</body>
+</html>
